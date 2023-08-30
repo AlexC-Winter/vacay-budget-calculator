@@ -6,7 +6,7 @@ var dailyBudget = document.querySelector(".daily-budget");
 var tripInfo = function() {
     var totalBudget = Number(prompt("What is your total budget?"));
     var accommodation = Number(prompt("What are you accommodation costs?"));
-    var numDays = Number(Prompt("How many days does your trip last?"));
+    var numDays = Number(prompt("How many days does your trip last?"));
 
     calculateDailyBudget(totalBudget, accommodation, numDays);
 };
@@ -14,7 +14,7 @@ var tripInfo = function() {
 var calculateDailyBudget = function(totalBudget, accommodation, numDays) {
     var daily = ((totalBudget - accommodation) / numDays).toFixed(2);
 
-    dailyBudget.innertext(`you can spend $${daily} a day on food and fun!`)
+    dailyBudget.innerText = `you can spend $${daily} a day on food and fun!`
 };
 
 tripInfoButton.addEventListener("click", tripInfo);
